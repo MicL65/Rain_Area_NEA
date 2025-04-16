@@ -34,28 +34,35 @@ jobs:
           const puppeteer = require('puppeteer');
           
           (async () => {
-            // Launch browser with necessary flags for CI environments
-            const browser = await puppeteer.launch({
-              args: ['--no-sandbox', '--disable-setuid-sandbox']
-            });
-            const page = await browser.newPage();
-            
-            // Navigate to the NEA Rain Areas page
-            await page.goto('https://www.nea.gov.sg/weather/rain-areas', { waitUntil: 'networkidle2' });
-            
-            // Create a timestamp for the filename in UTC
-            const now = new Date();
-            const isoString = now.toISOString().split('.')[0].replace(/:/g, "-") + "Z";
-            const filePath = `pdf_archive/rain-areas-${isoString}.pdf`;
-            
-            // Generate a PDF of the page in A4 format
-            await page.pdf({ path: filePath, format: 'A4' });
-            console.log(`PDF saved as ${filePath}`);
-            await browser.close();
-          })().catch(err => {
-            console.error(err);
-            process.exit(1);
-          });
+            try {
+              console.log("Launching browser...");
+              const browser = await puppeteer.launch({
+                args: ['--no-sandbox', '--disable-setuid-sandbox', '--disable-gpu']
+              });
+              const page = await browser.newPage();
+              console.log("Navigating to the page...");
+              await page.goto('https://www.nea.gov.sg/weather/rain-areas', { waitUntil: 'networkidle2', timeout: 60000 });
+              console.log("Page loaded. Generating PDF...");
+
+              // Create a timestamp for the filename in UTC
+              const now = new Date();
+              const isoString = now.toISOString().split('.')[0].replace(/:/g, "-") + "Z";
+              const filePath = `pdf_archive/rain-areas-${isoString}.pdf`;
+
+              // Generate a PDF of the page in A4 format with margins
+              await page.pdf({ 
+                path: filePath, 
+                format: 'A4',
+                margin: { top: '20px', right: '20px', bottom: '20px', left: '20px' }
+              });
+              
+              console.log(`PDF saved as ${filePath}`);
+              await browser.close();
+            } catch (err) {
+              console.error("Error encountered:", err);
+              process.exit(1);
+            }
+          })();
           EOF
 
       - name: Create pdf_archive directory

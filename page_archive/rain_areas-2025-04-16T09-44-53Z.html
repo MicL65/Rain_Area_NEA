@@ -1,0 +1,1193 @@
+ <!--Page variables--> <!--Twitter variables--> <!--Facebook variables--> <!DOCTYPE html> <html class="no-js" lang="en"> <head> <meta charset="utf-8"> <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> <title>
+	Rain Areas
+</title> <meta id="Rain Areas in Singapore" name="description" content="The National Environment Agency"> <meta name="viewport" content="width=device-width,initial-scale=1"> <link rel="icon" href="/assets/images/favicon.ico" type="image/x-icon" /> <!-- Web Mobile --> <link rel="apple-touch-icon" href="/apple-icon.png"> <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png"> <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png"> <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png"> <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png"> <link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png"> <link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png"> <link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png"> <link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png"> <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png"> <link rel="manifest" href="/assets/images/web_mobile/manifest.json"> <link rel="stylesheet" href="/assets/styles/sgdsnea.css"> <link rel="stylesheet" href="/assets/styles/all.min.css"> <link rel="stylesheet" href="/assets/styles/main.css"> <!-- Twitter --> <meta id="tw_card" name="twitter:card" content="summary"> <meta id="tw_title" name="twitter:title" content="Rain Areas"> <meta id="tw_description" name="twitter:description" content="Rain Areas in Singapore"> <meta id="tw_imageUrl" name="twitter:image:src" content=""> <!-- Facebook --> <meta id="fb_title" property="og:title" content="Rain Areas" /> <meta id="fb_description" property="og:description" content="Rain Areas in Singapore" /> <meta id="fb_imageUrl" property="og:image" content="" /> <meta id="fb_imageWidth" property="og:image:width" content="" /> <meta id="fb_imageHeight" property="og:image:height" content="" /> <meta id="fb_url" property="og:url" content="https://www.nea.gov.sg/weather/rain-areas" /> <meta property="fb:admins" content="" /> <meta name="facebook-domain-verification" content="07qfp6p53tgdwjamsdhb98wb6nnefp" /> <script src="/assets/scripts/sketch.js" type="text/javascript"></script> <script src="/assets/scripts/modernizr-custom.js" type="text/javascript"></script> <script src="/assets/scripts/main.js" type="text/javascript"></script> <!-- SGDS Masthead --> <script type="module" src="/assets/scripts/sgds-masthead.js"></script> <!-- WOGAA --> <script src="https://assets.wogaa.sg/scripts/wogaa.js"></script> <!-- Google Tag Manager --> <script>
+                (function (w, d, s, l, i) {
+                    w[l] = w[l] || []; w[l].push({
+                        'gtm.start':
+                            new Date().getTime(), event: 'gtm.js'
+                    }); var f = d.getElementsByTagName(s)[0],
+                        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                            'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+                })(window, document, 'script', 'dataLayer', 'GTM-NP59Q69');
+            </script> <!-- End Google Tag Manager --> <!--Google Analytics--> <!-- Global site tag (gtag.js) - Google Analytics --> <script async src="https://www.googletagmanager.com/gtag/js?id=G-319615248"></script> <script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-319615248');
+            </script> <!--End Google Analytics--> <script type='text/javascript' src='https://platform-api.sharethis.com/js/sharethis.js#property=66f662b881d8c0001ad2dba1&product=inline-share-buttons' async='async'></script> <script type="text/javascript">
+!function(e,t){"object"==typeof exports&&"undefined"!=typeof module?t():"function"==typeof define&&define.amd?define(t):t()}(0,function(){"use strict";function e(e){var t=this.constructor;return this.then(function(n){return t.resolve(e()).then(function(){return n})},function(n){return t.resolve(e()).then(function(){return t.reject(n)})})}function t(e){return new this(function(t,n){function o(e,n){if(n&&("object"==typeof n||"function"==typeof n)){var f=n.then;if("function"==typeof f)return void f.call(n,function(t){o(e,t)},function(n){r[e]={status:"rejected",reason:n},0==--i&&t(r)})}r[e]={status:"fulfilled",value:n},0==--i&&t(r)}if(!e||"undefined"==typeof e.length)return n(new TypeError(typeof e+" "+e+" is not iterable(cannot read property Symbol(Symbol.iterator))"));var r=Array.prototype.slice.call(e);if(0===r.length)return t([]);for(var i=r.length,f=0;r.length>f;f++)o(f,r[f])})}function n(e){return!(!e||"undefined"==typeof e.length)}function o(){}function r(e){if(!(this instanceof r))throw new TypeError("Promises must be constructed via new");if("function"!=typeof e)throw new TypeError("not a function");this._state=0,this._handled=!1,this._value=undefined,this._deferreds=[],l(e,this)}function i(e,t){for(;3===e._state;)e=e._value;0!==e._state?(e._handled=!0,r._immediateFn(function(){var n=1===e._state?t.onFulfilled:t.onRejected;if(null!==n){var o;try{o=n(e._value)}catch(r){return void u(t.promise,r)}f(t.promise,o)}else(1===e._state?f:u)(t.promise,e._value)})):e._deferreds.push(t)}function f(e,t){try{if(t===e)throw new TypeError("A promise cannot be resolved with itself.");if(t&&("object"==typeof t||"function"==typeof t)){var n=t.then;if(t instanceof r)return e._state=3,e._value=t,void c(e);if("function"==typeof n)return void l(function(e,t){return function(){e.apply(t,arguments)}}(n,t),e)}e._state=1,e._value=t,c(e)}catch(o){u(e,o)}}function u(e,t){e._state=2,e._value=t,c(e)}function c(e){2===e._state&&0===e._deferreds.length&&r._immediateFn(function(){e._handled||r._unhandledRejectionFn(e._value)});for(var t=0,n=e._deferreds.length;n>t;t++)i(e,e._deferreds[t]);e._deferreds=null}function l(e,t){var n=!1;try{e(function(e){n||(n=!0,f(t,e))},function(e){n||(n=!0,u(t,e))})}catch(o){if(n)return;n=!0,u(t,o)}}var a=setTimeout;r.prototype["catch"]=function(e){return this.then(null,e)},r.prototype.then=function(e,t){var n=new this.constructor(o);return i(this,new function(e,t,n){this.onFulfilled="function"==typeof e?e:null,this.onRejected="function"==typeof t?t:null,this.promise=n}(e,t,n)),n},r.prototype["finally"]=e,r.all=function(e){return new r(function(t,o){function r(e,n){try{if(n&&("object"==typeof n||"function"==typeof n)){var u=n.then;if("function"==typeof u)return void u.call(n,function(t){r(e,t)},o)}i[e]=n,0==--f&&t(i)}catch(c){o(c)}}if(!n(e))return o(new TypeError("Promise.all accepts an array"));var i=Array.prototype.slice.call(e);if(0===i.length)return t([]);for(var f=i.length,u=0;i.length>u;u++)r(u,i[u])})},r.allSettled=t,r.resolve=function(e){return e&&"object"==typeof e&&e.constructor===r?e:new r(function(t){t(e)})},r.reject=function(e){return new r(function(t,n){n(e)})},r.race=function(e){return new r(function(t,o){if(!n(e))return o(new TypeError("Promise.race accepts an array"));for(var i=0,f=e.length;f>i;i++)r.resolve(e[i]).then(t,o)})},r._immediateFn="function"==typeof setImmediate&&function(e){setImmediate(e)}||function(e){a(e,0)},r._unhandledRejectionFn=function(e){void 0!==console&&console&&console.warn("Possible Unhandled Promise Rejection:",e)};var s=function(){if("undefined"!=typeof self)return self;if("undefined"!=typeof window)return window;if("undefined"!=typeof global)return global;throw Error("unable to locate global object")}();"function"!=typeof s.Promise?s.Promise=r:s.Promise.prototype["finally"]?s.Promise.allSettled||(s.Promise.allSettled=t):s.Promise.prototype["finally"]=e});
+
+</script><script type="text/javascript" src="/assets/scripts/vue.min.js"></script><script type="text/javascript" src="/assets/scripts/vue-slider-component.umd.min.js"></script><style type="text/css" media="all">.st-btn[data-network='custom-sticky-copy'] {
+  background-color: #14682B
+}
+.st-btn[data-network='custom-sticky-copy'] img {
+  filter: 
+}
+.st-btn[data-network='custom-sticky-copy'] > span {
+  color: #fff
+}
+
+.wog--flex {
+  margin-bottom: 30px;
+}</style><link rel="canonical" href="https://www.nea.gov.sg/weather/rain-areas" /><meta name="description" content="Rain Areas in Singapore" /></head> <body onload="lateLoadChatFile()"> <sgds-masthead></sgds-masthead> <!--Captain Green--> <script>
+        function lateLoadChatFile() {
+            setTimeout(() => {
+                const bodyTag = document.getElementsByTagName("body")[0];
+
+                // Create link element to import chat.css file and append it on the body element
+                let linkTag = document.createElement("link");
+                linkTag.href = " https://webchat.vica.gov.sg/static/css/chat.css";
+                linkTag.type = "text/css";
+                linkTag.rel = "stylesheet";
+                linkTag.referrerPolicy = "origin";
+                bodyTag.appendChild(linkTag);
+
+                // Create script element to import chat.js file and append it on the body element
+                let scriptTag = document.createElement("script");
+                scriptTag.src = " https://webchat.vica.gov.sg/static/js/chat.js";
+                scriptTag.type = "text/javascript";
+                scriptTag.referrerPolicy = "origin";
+                scriptTag.defer = true;
+                bodyTag.appendChild(scriptTag);
+            }, 5000);
+        }
+    </script> <!--End Captain Green--> <!-- Google Tag Manager (noscript) --> <noscript> <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NP59Q69"
+                        height="0" width="0" style="display:none;visibility:hidden"></iframe> </noscript> <!-- End Google Tag Manager (noscript) --> <form id="mvcForm"> <script src="/assets/scripts/jquery.min.js" type="text/javascript"></script> <a href="#main" class="skip-link vh">Skip to main</a> <header id="header" class="header"> <div class="nav"> 
+
+
+
+<nav class="navbar sgds-menu">
+    <div class="container">
+        <div class="navbar-brand">
+            <a href="/" class="logo"><img src="/assets/images/design/logo.png" alt="National Environment Agency"></a>
+        </div>
+        <div class="menu-list">
+            <ul id="mainnav" class="navbar-menu nav-container">
+                <li class="navbar-item is-hidden-desktop sgds-search">
+                    <div class="field has-addons">
+                        <div class="control has-icons-right is-expanded">
+                            <input class="input is-fullwidth" id="siteSearchMobile" type="text" placeholder="Search for information" name="query">
+                            <div class="addons">
+                                <button type="button" id="startSpeechRecognition" class="mic-search mic-button"><span class="visuallyhidden">Voice search</span><i class="icon-mic is-size-6"></i></button>
+                                <button type="submit" class="btn-search sgds-btn-search"><span class="visuallyhidden">Submit search</span><i class="sgds-icon icon-search is-size-6 search-bar"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+        <li class="navbar-item is-expanded has-dropdown is-hoverable is-mega">
+            <a href="/our-services" target="_self" class="navbar-link nav__item is-uppercase">
+                Our Services
+            </a>
+            <i class="sgds-icon sgds-icon-chevron-down dropdown-icon"></i>
+            <div class="navbar-dropdown">
+                <div class="container">
+                            <a class="navbar-item" href="/our-services/after-death" target="_self">After Death</a>
+        <a class="navbar-item" href="/our-services/climate-change-energy-efficiency" target="_self">Climate Change &amp; Energy Efficiency</a>
+        <a class="navbar-item" href="/our-services/dengue-zika" target="_self">Dengue &amp; Zika</a>
+        <a class="navbar-item" href="/our-services/development-control" target="_self">Development Control</a>
+        <a class="navbar-item" href="/our-services/hawker-management" target="_self">Hawker Management</a>
+        <a class="navbar-item" href="/our-services/pest-control" target="_self">Pest Control</a>
+        <a class="navbar-item" href="/our-services/pollution-control" target="_self">Pollution Control</a>
+        <a class="navbar-item" href="/our-services/port-health" target="_self">Port Health</a>
+        <a class="navbar-item" href="/our-services/public-cleanliness" target="_self">Public Cleanliness</a>
+        <a class="navbar-item" href="/our-services/radiation-safety" target="_self">Radiation Safety</a>
+        <a class="navbar-item" href="/our-services/smoking-prohibition" target="_self">Smoking Prohibition</a>
+        <a class="navbar-item" href="/our-services/waste-management" target="_self">Waste Management </a>
+        <a class="navbar-item" href="/our-services/weather" target="_self">Weather</a>
+        <a class="navbar-item" href="/our-services/towards-zero-waste" target="_self">Towards Zero Waste</a>
+        <a class="navbar-item" href="/our-services/year-of-public-hygiene" target="_self">Year of Public Hygiene</a>
+
+                </div>
+            </div>
+        </li>
+        <li class="navbar-item is-expanded has-dropdown is-hoverable is-mega">
+            <a href="/corporate-functions/who-we-are" target="_self" class="navbar-link nav__item is-uppercase">
+                Who We Are
+            </a>
+            <i class="sgds-icon sgds-icon-chevron-down dropdown-icon"></i>
+            <div class="navbar-dropdown">
+                <div class="container">
+                            <a class="navbar-item" href="/corporate-functions/who-we-are/about-us" target="_self">About Us</a>
+        <a class="navbar-item" href="/corporate-functions/who-we-are/our-purpose" target="_self">Our Purpose</a>
+        <a class="navbar-item" href="/corporate-functions/who-we-are/people" target="_self">People</a>
+        <a class="navbar-item" href="/corporate-functions/who-we-are/groups-and-divisions" target="_self">Groups and Divisions</a>
+        <a class="navbar-item" href="/corporate-functions/who-we-are/careers" target="_self">Careers</a>
+
+                </div>
+            </div>
+        </li>
+        <li class="navbar-item is-expanded has-dropdown is-hoverable is-mega">
+            <a href="/programmes-grants" target="_self" class="navbar-link nav__item is-uppercase">
+                Programmes &amp; Grants
+            </a>
+            <i class="sgds-icon sgds-icon-chevron-down dropdown-icon"></i>
+            <div class="navbar-dropdown">
+                <div class="container">
+                            <a class="navbar-item" href="/programmes-grants/campaigns" target="_self">Campaigns</a>
+        <a class="navbar-item" href="/programmes-grants/courses" target="_self">Courses</a>
+        <a class="navbar-item" href="/programmes-grants/events-calendar" target="_self">Events</a>
+        <a class="navbar-item" href="/programmes-grants/grants-and-awards" target="_self">Grants and Awards</a>
+        <a class="navbar-item" href="/programmes-grants/learning-journeys" target="_self">Learning Journeys</a>
+        <a class="navbar-item" href="/programmes-grants/programmes" target="_self">Programmes</a>
+        <a class="navbar-item" href="/programmes-grants/schemes" target="_self">Schemes</a>
+        <a class="navbar-item" href="/programmes-grants/volunteering" target="_self">Volunteering</a>
+
+                </div>
+            </div>
+        </li>
+        <li class="navbar-item is-expanded has-dropdown is-hoverable is-mega">
+            <a href="/media" target="_self" class="navbar-link nav__item is-uppercase">
+                Media
+            </a>
+            <i class="sgds-icon sgds-icon-chevron-down dropdown-icon"></i>
+            <div class="navbar-dropdown">
+                <div class="container">
+                            <a class="navbar-item" href="/media/news" target="_self">News</a>
+        <a class="navbar-item" href="/media/videos" target="_blank">Videos</a>
+        <a class="navbar-item" href="/media/nea-vox" target="_self">NEA Vox</a>
+        <a class="navbar-item" href="/media/podcast" target="_self">Podcast</a>
+        <a class="navbar-item" href="/media/readers-letters" target="_self">Readers&#39; Letters </a>
+
+                </div>
+            </div>
+        </li>
+        <li class="navbar-item is-expanded has-dropdown is-hoverable is-mega">
+            <a href="/corporate-functions/resources" target="_self" class="navbar-link nav__item is-uppercase">
+                Resources
+            </a>
+            <i class="sgds-icon sgds-icon-chevron-down dropdown-icon"></i>
+            <div class="navbar-dropdown">
+                <div class="container">
+                            <a class="navbar-item" href="/corporate-functions/resources/circulars" target="_self">Circulars</a>
+        <a class="navbar-item" href="/corporate-functions/resources/educational-materials" target="_self">Educational Materials</a>
+        <a class="navbar-item" href="/corporate-functions/resources/facts-figures" target="_self">Facts and Figures</a>
+        <a class="navbar-item" href="/corporate-functions/resources/legislation-international-law" target="_self">Legislation and International Law</a>
+        <a class="navbar-item" href="/corporate-functions/resources/medium-term-note-programme" target="_self">Medium Term Note Programme</a>
+        <a class="navbar-item" href="/corporate-functions/resources/practices-and-guidelines" target="_self">Practices and Guidelines</a>
+        <a class="navbar-item" href="/corporate-functions/resources/publications" target="_self">Publications</a>
+        <a class="navbar-item" href="/corporate-functions/resources/tender-notices" target="_self">Tender Notices</a>
+        <a class="navbar-item" href="/corporate-functions/resources/research" target="_self">Research</a>
+
+                </div>
+            </div>
+        </li>
+        <li class="navbar-item is-expanded has-dropdown is-hoverable">
+                <a href="/e-services" target="_blank" class="navbar-link nav__item is-uppercase" rel="noopener noreferrer">
+                    E-Services
+                </a>
+        </li>
+            </ul>
+<div class="nav-extension-mobile">
+                <!-- Mobile Content: Put this in the content block START -->
+                <!-- Stacked at top as links -->
+                <ul class="social-links">
+           <li><a href="https://play.google.com/store/apps/details?id=sg.gov.nea&amp;hl=en" target="_blank"><span class="icon smallicon-android"></span> myENV on Android</a></li>
+           <li><a href="https://apps.apple.com/sg/app/myenv/id444435182" target="_blank"><span class="icon smallicon-iphone"></span> myENV on iPhone</a></li>
+            
+             
+                </ul>
+                <!-- Stacked at bottom as social icons -->
+                <div class="mobile-socials">
+                    <span style="padding-right: 1rem;">Follow us on: </span>
+                    <ul class="social-icons">
+                        <li><a href="https://www.facebook.com/NEASingapore" aria-label="facebook" target="_blank"><span class="fab fa-facebook-f"></span></a></li>
+                <li><a href="https://www.instagram.com/nea_sg/" aria-label="instagram" target="_blank"><span class="fab fa-instagram"></span></a></li>
+                <li><a href="https://www.linkedin.com/company/national-environment-agency" aria-label="linkedin" target="_blank"><span class="fab fa-linkedin-in"></span></a></li>
+<li><a href="https://go.gov.sg/whatsapp-nea" aria-label="whatsapp" target="_blank"><span class="fab fa-whatsapp"></span></a></li>
+<li><a href="https://t.me/NEASingapore" aria-label="telegram" target="_blank"><span class="fab fa-telegram-plane"></span></a></li>
+                <li><a href="https://twitter.com/NEAsg" aria-label="X" target="_blank"><span class="fa-brands fa-x-twitter"></span></a></li>
+<li><a href="https://www.threads.net/@nea_sg" aria-label="Threads" target="_blank"><span class="fa-brands fa-threads"></span></a></li>
+                <li><a href="https://www.youtube.com/channel/UC-tjEFkd0tT2VpD5vbjyAKA/videos" aria-label="youtube" target="_blank"><span class="fab fa-youtube"></span></a></li>
+                <li><a href="https://www.tiktok.com/@nea_sg" aria-label="tiktok" target="_blank"><span class="fab fa-tiktok"></span></a></li>
+                    </ul>
+                </div>
+                <!-- Mobile Content: Put this in the content block END -->
+            </div>        </div>
+        <ul class="nav-container mobile-navbar-menu">
+            <li class="navbar-item has-dropdown is-hoverable notification">
+                <button class="sgds-button is-white btn-notification js-notification" type="button" aria-label="notification button">
+                    <span class="icon smallicon-notifications"></span>
+                    <i id="notification-circle"></i>
+                </button>
+            </li>
+            <li class="navbar-item has-dropdown is-hoverable is-hidden-touch">
+                <button id="search-activate" class="sgds-button is-white" type="button" aria-label="search button">
+                    <span class="sgds-icon sgds-icon-search"></span>
+                </button>
+            </li>
+            <li>
+                <div class="navbar-burger burger js-mobile-menu" data-target="mainnav">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<div class="sgds-search container-fluid is-hidden-touch search-bar" id="searchbar">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="field has-addons padding--sm">
+                    <div class="control has-icons-left is-expanded">
+                        <input class="input is-fullwidth is-borderless is-shadowless" id="siteSearch" type="text" placeholder="Search for information" name="query" autocomplete="off">
+                        <span class="icon is-left">
+                            <i class="sgds-icon sgds-icon-search is-size-4 search-bar"></i>
+                        </span>
+                    </div>
+                    <div class="control">
+                        <button type="button" class="sgds-button is-primary sgds-btn-search" id="desktop-search">SEARCH</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="sgds-menu nav-extension">
+    <div class="container">
+        <!-- Desktop Content: Put this in the content block START -->
+        <!-- Appears on left side as social icons -->
+        <div class="" style="display:flex;align-items:center">
+            <span style="padding-right: 1rem;">Follow us on: </span>
+            <ul class="social-icons">
+                <li><a href="https://www.facebook.com/NEASingapore" aria-label="facebook" target="_blank"><span class="fab fa-facebook-f"></span></a></li>
+                <li><a href="https://www.instagram.com/nea_sg/" aria-label="instagram" target="_blank"><span class="fab fa-instagram"></span></a></li>
+                <li><a href="https://www.linkedin.com/company/national-environment-agency" aria-label="linkedin" target="_blank"><span class="fab fa-linkedin-in"></span></a></li>
+<li><a href="https://go.gov.sg/whatsapp-nea" aria-label="whatsapp" target="_blank"><span class="fab fa-whatsapp"></span></a></li>
+<li><a href="https://t.me/NEASingapore" aria-label="telegram" target="_blank"><span class="fab fa-telegram-plane"></span></a></li>
+                <li><a href="https://twitter.com/NEAsg" aria-label="X" target="_blank"><span class="fa-brands fa-x-twitter"></span></a></li>
+<li><a href="https://www.threads.net/@nea_sg" aria-label="Threads" target="_blank"><span class="fa-brands fa-threads"></span></a></li>
+                <li><a href="https://www.youtube.com/channel/UC-tjEFkd0tT2VpD5vbjyAKA/videos" aria-label="youtube" target="_blank"><span class="fab fa-youtube"></span></a></li>
+                <li><a href="https://www.tiktok.com/@nea_sg" aria-label="tiktok" target="_blank"><span class="fab fa-tiktok"></span></a></li>
+                            </ul>
+        </div>
+        <!-- Appears on right side as links -->
+ <ul class="social-links">
+<li>
+             <span>Get the app: </span>
+</li>
+           <li><a href="https://play.google.com/store/apps/details?id=sg.gov.nea&amp;hl=en" title="" class="" target="_blank"><em class="icon smallicon-android"></em>&nbsp;Android</a></li>
+           <li><a href="https://apps.apple.com/sg/app/myenv/id444435182" title="" class="" target="_blank"><em class="icon smallicon-iphone"></em>&nbsp;iPhone</a></li>
+            
+        </ul>
+        <!-- Desktop Content: Put this in the content block END -->
+    </div>
+</div><div id="gtx-trans" style="position: absolute; left: 26px; top: 258.688px;"><div class="gtx-trans-icon"></div></div>
+
+<div id="heavyRainDiv" class="notification-bar" style="display: none;">
+
+</div>
+
+<script>
+    jQuery(document).ready(function ($) {
+        // Wait for the timestamp to be loaded
+        window.timestampPromise
+            .then(timestamp => {
+                return $.ajax({
+                    url: '/api/HeavyRainWarning/GetData/' + timestamp,
+                    type: 'GET',
+                    success: function (data) {
+                        if (data != null) {
+                            $("#heavyRainDiv").addClass("rain-alert-notification").append("<div class=\"container\"><p>"
+                                + data.warning.replace(/<br>/g, ' ') +
+                                "</p><button type=\"button\" class=\"js-close-notification\"><span class=\"visuallyhidden\">Close notification</span><i class=\"icon icon-close\"></i></button></div>");
+                        }
+                    },
+                    error: function (param) {
+                        console.log(param);
+                    }
+                });
+            })
+            .catch(error => {
+                console.error('Error during asynchronous tasks:', error);
+            })
+            .finally(() => {
+                jQuery('.js-notification').click();
+            });
+    });
+</script>
+
+ </div> </header> <main id="main" class="main"> <section class="header-banner"> <div class="content"> <div class="container"> <h2 class="header-banner__title"><span>Weather</span><span class="subtitle"></span></h2> </div> </div> </section> 
+<section class="breadcrumb">
+    <div class="container">
+        <ol>
+                    <li class="breadcrumb__item"><a href="/" class="breadcrumb__link"><span>The National Environment Agency</span></a></li>
+                    <li class="breadcrumb__item"><a href="/corporate-functions" class="breadcrumb__link"><span>Corporate Functions</span></a></li>
+                    <li class="breadcrumb__item"><a href="/corporate-functions/weather" class="breadcrumb__link"><span>Weather</span></a></li>
+                    <li class="breadcrumb__item"><a href="/weather/rain-areas" class="breadcrumb__link is-active"><span>Rain Areas</span></a></li>
+        </ol>
+    </div>
+</section>
+<div id="Breadcrumb_TADDA5307006_Col00" class="sf_colsIn container" data-sf-element="Container">
+<div >
+    <div ><div class="font-resizer"><button data-size="normal" class="js-resizer is-active" aria-label="Normal"><span class="visuallyhidden">Normal Font Size</span><i class="icon-font-size"></i></button><button data-size="big" class="js-resizer" aria-label="Big"><span class="visuallyhidden">Big Font Size</span><i class="icon-font-size"></i></button><button data-size="bigger" class="js-resizer" aria-label="Bigger"><span class="visuallyhidden">Bigger Font Size</span><i class="icon-font-size"></i></button><button type="button" class="print-button" aria-label="Print"><i class="icon-printer"></i></button></div><div class="clear"></div></div>    
+</div>
+</div>
+ 
+<div class="container container--spt" data-sf-element="Row">
+    <div class="sf_colsOut sf_1col_1_100">
+        <div id="MainContent_TBDD787F9001_Col00" class="sf_colsIn sf_1col_1_100" data-sf-element="Column 1" data-placeholder-label="intro">
+
+
+
+
+
+<h1>Rain Areas</h1><div id="warning_detail" style="padding: 20px; background-color:#ffe6e6;display:none">
+    <h2 style="text-align:center" id="warning_title"></h2>
+    <p id="warning_text"></p>
+</div>
+
+<script>
+    jQuery(document).ready(function ($) {
+        // Wait for the timestamp to be loaded
+        window.timestampPromise
+            .then(timestamp => {
+                var link = '/api/Warning/GetHeavyRain' + '/' + timestamp;
+                $.ajax({
+                    url: link,
+                    type: 'GET',
+                    success: function (data) {
+                        if (data != null) {
+                            if (data.warning === 'NIL' || !data.viewMore) {
+                                $('div#warning_detail').css('display', 'none');
+                            } else {
+                                $('div#warning_detail').css('display', '');
+                                $('h2#warning_title').text(data.title);
+                                $('p#warning_text').html(data.warning);
+                            }
+                        }
+                    },
+                    error: function (param) {
+                        console.log(param);
+                    }
+                });
+            })
+            .catch(error => {
+                console.error('Error during asynchronous tasks:', error);
+            });
+    });
+</script><div class="sf_cols" data-sf-element="Row">
+    <div class="sf_colsOut sf_2cols_1_25">
+        <div id="MainContent_TBDD787F9002_Col00" class="sf_colsIn sf_2cols_1in_25 side-nav" data-sf-element="Column 1" data-placeholder-label="side nav">
+<div class="side-nav">
+    <div class="container">
+        <ul class="side-nav__list no-mobile">
+     <li class="">
+        <a href="/corporate-functions/weather/overview" class="side-nav__link">Overview</a>
+
+    </li>
+     <li class="">
+        <a href="/corporate-functions/weather/2-hour-nowcast" class="side-nav__link">2 Hour Nowcast</a>
+
+    </li>
+     <li class="">
+        <a href="/corporate-functions/weather/24-hour-forecast" class="side-nav__link">24 Hour Forecast</a>
+
+    </li>
+     <li class="is-active">
+        <a href="/weather/rain-areas" class="side-nav__link">Rain Areas</a>
+
+    </li>
+     <li class="">
+        <a href="/corporate-functions/weather/regional-world-forecast" class="side-nav__link">Regional &amp; World Forecast</a>
+
+    </li>
+     <li class="">
+        <a href="/corporate-functions/weather/regional-earthquake-and-tsunami-alert" class="side-nav__link">Regional Earthquake &amp; Tsunami Alert</a>
+
+    </li>
+     <li class="">
+        <a href="/corporate-functions/weather/regional-haze-situation" class="side-nav__link">Regional Haze Situation</a>
+
+    </li>
+     <li class="">
+        <a href="/corporate-functions/weather/regional-volcanic-eruptions" class="side-nav__link">Regional Volcanic Eruptions</a>
+
+    </li>
+     <li class="">
+        <a href="/corporate-functions/weather/satellite-images" class="side-nav__link">Satellite Images</a>
+
+    </li>
+     <li class="">
+        <a href="/corporate-functions/weather/tropical-cyclone-warnings" class="side-nav__link">Tropical Cyclone Warnings</a>
+
+    </li>
+     <li class="">
+        <a href="/corporate-functions/weather/tide-timings" class="side-nav__link">Tide Timings</a>
+
+    </li>
+     <li class="">
+        <a href="/corporate-functions/weather/ultraviolet-index" class="side-nav__link">Ultraviolet Index </a>
+
+            <ul>
+     <li class="">
+        <a href="/corporate-functions/weather/ultraviolet-index/uv-radiation-uv-index" class="side-nav__link">UV Radiation &amp; UV Index</a>
+
+    </li>
+            </ul>
+    </li>
+        </ul>
+        <div class="mobile-only">
+            <label for="sidenavmenu">You are now reading:</label>
+            <select id="sidenavmenu" onchange="this.options[this.selectedIndex].dataset.url && (window.location = this.options[this.selectedIndex].dataset.url);" class="js-redirect">
+    <option data-url="/corporate-functions/weather/overview" >Overview</option>
+    <option data-url="/corporate-functions/weather/2-hour-nowcast" >2 Hour Nowcast</option>
+    <option data-url="/corporate-functions/weather/24-hour-forecast" >24 Hour Forecast</option>
+    <option data-url="/weather/rain-areas" selected>Rain Areas</option>
+    <option data-url="/corporate-functions/weather/regional-world-forecast" >Regional &amp; World Forecast</option>
+    <option data-url="/corporate-functions/weather/regional-earthquake-and-tsunami-alert" >Regional Earthquake &amp; Tsunami Alert</option>
+    <option data-url="/corporate-functions/weather/regional-haze-situation" >Regional Haze Situation</option>
+    <option data-url="/corporate-functions/weather/regional-volcanic-eruptions" >Regional Volcanic Eruptions</option>
+    <option data-url="/corporate-functions/weather/satellite-images" >Satellite Images</option>
+    <option data-url="/corporate-functions/weather/tropical-cyclone-warnings" >Tropical Cyclone Warnings</option>
+    <option data-url="/corporate-functions/weather/tide-timings" >Tide Timings</option>
+    <option data-url="/corporate-functions/weather/ultraviolet-index" >Ultraviolet Index </option>
+    <option data-url="/corporate-functions/weather/ultraviolet-index/uv-radiation-uv-index" >UV Radiation &amp; UV Index</option>
+            </select>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+            
+        </div>
+    </div>
+    <div class="sf_colsOut sf_2cols_2_75">
+        <div id="MainContent_TBDD787F9002_Col01" class="sf_colsIn sf_2cols_2in_75 rte" data-sf-element="Column 2" data-placeholder-label="article"><div class="sf_cols" data-sf-element="Row">
+    <div class="sf_colsOut sf_1col_1_100">
+        <div id="MainContent_TBDD787F9003_Col00" class="sf_colsIn sf_1col_1_100" data-sf-element="Column 1"><h1>Rain Areas</h1>
+            
+        </div>
+    </div>
+</div><div class="sf_cols" data-sf-element="Row">
+    <div class="sf_colsOut sf_1col_1_100">
+        <div id="MainContent_TBDD787F9004_Col00" class="sf_colsIn sf_1col_1_100" data-sf-element="Column 1"><link rel="stylesheet" href="/assets/styles/vue-slider-component.css" />
+<style>
+    .overlay-landmark, .overlay-hdb, .overlay-mrt,
+    .overlay-expressway, .rain-sg-map, .rain-around-sg-map, #rain_overlay, #rain_around_sg_overlay {
+        width: 100%;
+    }
+
+    #box-one, #box-two {
+        padding-top: 0px;
+    }
+
+    .rain-animation-container {
+        margin-bottom: 25px;
+        padding: 20px;
+    }
+
+    .rain-overlay-history-items {
+        padding-left: 15px;
+    }
+
+    .d-flex {
+        display: flex !important;
+    }
+
+    .justify-content-between {
+        justify-content: space-between !important;
+    }
+
+    .ml-3, .mx-3 {
+        margin-left: 1rem !important;
+    }
+
+    .mr-3, .mx-3 {
+        margin-right: 1rem !important;
+    }
+
+    .w-100 {
+        width: 100% !important;
+    }
+
+    .rain-button {
+        width: 2.4rem;
+        height: 2.4rem;
+        display: block;
+        padding: 1.5rem 0.5rem;
+        margin-top: 0.5rem;
+        margin-right: 0.5rem;
+        border: 0;
+    }
+
+        .rain-button:focus {
+            outline: 0;
+        }
+
+    .play-button {
+        background: url(/assets/images/icons/icon-play.png) no-repeat center;
+    }
+
+    .stop-button {
+        background: url(/assets/images/icons/icon-stop.png) no-repeat center;
+    }
+
+    .pb-1, .py-1 {
+        padding-bottom: .25rem !important;
+    }
+
+    .pt-1, .py-1 {
+        padding-top: .25rem !important;
+    }
+
+    .vue-slider-dot-handle {
+        border: 2px solid white;
+        cursor: pointer;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        background-color: #6a2f94;
+        box-sizing: border-box;
+        box-shadow: 0.5px 0.5px 2px 1px rgba(0,0,0,0.32);
+    }
+
+    .vue-slider-dot-tooltip {
+        background: #080;
+        color: white;
+        border-radius: 12px;
+    }
+
+    .vue-slider-dot-tooltip-bottom {
+        left: 20%;
+    }
+
+    .vue-slider-dot-tooltip-inner {
+        font-size: 14px;
+        white-space: nowrap;
+        padding: 2px 5px;
+        min-width: 20px;
+        text-align: center;
+        color: #fff;
+        border-radius: 5px;
+        border-color: #080;
+        background-color: #080;
+        box-sizing: content-box;
+    }
+
+    .vue-slider-rail {
+        background-color: #ccc;
+        border-radius: 15px;
+    }
+
+    .vue-slider-process {
+        background-color: #080;
+        border-radius: 15px;
+    }
+
+    .slider-label {
+        font-size: .8em;
+        font-weight: bold;
+        margin: 0;
+    }
+
+    span.vue-slider-dot-tooltip-text {
+        font-size: .9em;
+    }
+
+    .range-container {
+        margin-bottom: 1.2rem;
+    }
+
+    .vue-slider-mark-step {
+        width: 1px;
+        height: 100%;
+        border-radius: 0;
+        background-color: rgba(0, 0, 0, 0.2);
+        left: 50% !important;
+    }
+
+    .vue-slider-mark:first-child .vue-slider-mark-step, .vue-slider-mark:last-child .vue-slider-mark-step {
+        display: none;
+    }
+
+    .vue-slider-mark-label {
+        display: none;
+    }
+
+    @media (max-width: 768px) {
+        .rain-map {
+            margin-left: -52px;
+            margin-right: -30px;
+        }
+
+        #rain-area-slider, #rain-area-240-slider {
+            margin-left: -25px;
+            margin-right: -25px;
+        }
+
+        #box-master {
+            padding-right: 0px;
+        }
+
+        .range-container {
+            padding-right: 10px;
+        }
+        
+        .vue-slider-mark-step {
+            display: block;
+        }
+
+        .rain-button {
+            padding-right: 0;
+            margin-right: 0;
+        }
+
+        .vue-slider-dot-tooltip-bottom {
+            left: -40%;
+        }
+    }
+</style>
+<div class="section--white rain-animation-container">
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="tab__nav forecast-widget__tab">
+                <button type="button" data-box="one" class="tab__nav-item is-active" id="70kmtab">Singapore</button>
+                <button type="button" data-box="two" class="tab__nav-item" id="240kmtab">240 km range</button>
+            </div>
+        </div>
+        <div class="col-xs-12" id="box-master">
+            <div id="box-one" data-box="one" class="forecast-widget__content tab__item">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div id="rain-area-slider">
+    <div class="d-flex">
+        <button class="rain-button stop-button" v-if="autoplay" v-on:click.prevent="handleClick" aria-label="stop animation"></button>
+        <button class="rain-button play-button" v-if="!autoplay" v-on:click.prevent="handleClick" aria-label="play animation"></button>
+        <div class="range-container w-100">
+            <div v-if="items.length > 0" class="d-flex justify-content-between mx-3">
+                <p class="slider-label">{{ items[0].DateTime }}</p>
+                <p class="slider-label">{{ items[items.length - 1].DateTime }}</p>
+            </div>
+            <vue-slider class="py-1"
+                        v-model="getValue"
+                        v-bind:data="getValues"
+                        v-bind:min="0"
+                        v-bind:max="items.length - 1"
+                        v-bind:adsorb="true"
+                        v-bind:marks="true"
+                        v-bind:tooltip-placement="'bottom'"
+                        v-bind:tooltip="'always'"
+                        v-bind:tooltip-formatter="toolTipFormat"
+                        v-bind:height="24"
+                        v-bind:dot-size="24"
+                        v-bind:contained="true"
+                        v-on:change="itemChange">
+            </vue-slider>
+        </div>
+    </div>
+</div>
+<script>
+    new Vue({
+        el: '#rain-area-slider',
+        components: {
+            VueSlider: window['vue-slider-component']
+        },
+        data: {
+            autoplay: false,
+            autoInterval: null,
+            currentItem: 0,
+            items: [],
+        },
+        created: function() {
+            var that = this;
+
+            // Wait for the timestamp to be loaded
+            window.timestampPromise
+                .then(timestamp => {
+                    window.$.ajax({
+                        url: '/api/RainArea/GetRecentData/' + timestamp,
+                        type: 'GET',
+                        success: function (data) {
+                            if (data && data.length > 0) {
+                                that.items = data;
+                                that.currentItem = data.length - 1;
+                                window.$('#rain_overlay').css('display', 'inline');
+                            }
+                        },
+                        error: function (param) {
+                            console.log(param);
+                        }
+                    });
+                })
+                .catch(error => {
+                    console.error('Error during asynchronous tasks:', error);
+                });
+        },
+        computed: {
+            getValues: function () {
+                return this.items.length > 0 ? this.items.map(function (x, i) { return i }) : [];
+            },
+            getValue: function () {
+                if (this.items.length > 0) {
+                    window.$("#rain_overlay").attr("src", this.items[this.currentItem].Url);
+                    return this.currentItem ;
+                } else {
+                    return 0;
+                }
+            }
+        },
+        methods: {
+            toolTipFormat: function (value) {
+                return this.items.length > 0 ? this.items[this.currentItem].DateTime : '';
+            },
+            itemChange: function (value) {
+                var counter = 0;
+                this.items.forEach(function (x, i) {
+                    if (i == value) counter = i;
+                });
+                this.currentItem = counter;
+                this.clearInterval();
+            },
+            handleClick: function () {
+                if (!this.autoplay) {
+                    this.autoplay = true;
+                    var that = this;
+                    this.autoInterval = setInterval(function () {
+                        that.currentItem++;
+                        if (that.currentItem === that.items.length) {
+                            that.currentItem = 0;
+                        }
+                    }, 1000);
+                } else {
+                    this.clearInterval();
+                }
+            },
+            clearInterval: function () {
+                clearInterval(this.autoInterval);
+                this.autoplay = false;
+            }
+        }
+    });
+</script>
+                    </div>
+                    <div class="col-sm-12">
+                        <div class="rain-map">
+                            <img src="/assets/images/map/Landmarks.png" alt="landmarks" class="overlay overlay-landmark">
+                            <img src="/assets/images/map/SG-Township.png" alt="township" class="overlay overlay-hdb">
+                            <img src="/assets/images/map/MRT.png" alt="MRT" class="overlay overlay-mrt">
+                            <img src="/assets/images/map/expressway.png" alt="expressway" class="overlay overlay-expressway">
+                            <img src="/assets/images/map/base-853.png" alt="Singapore map" class="rain-sg-map">
+                            <img src="/assets/images/temp/rain-legend.jpg" alt="Rain areas over Singapore" id="rain_overlay" style="display:none" name="slide" class="overlay">
+                        </div>
+                        <img src="/assets/images/temp/rain-legend.jpg" alt="rain legend">
+                        <div class="content rain-checkbox">
+                            <p>Select overlay</p>
+                            <div data-overlay="overlay-landmark" class="checkbox checkbox-landmark">
+                                <input type="checkbox" id="checkbox-landmark">
+                                <label for="checkbox-landmark">Landmark</label>
+                            </div>
+                            <div data-overlay="overlay-hdb" class="checkbox checkbox-hdb">
+                                <input type="checkbox" id="checkbox-hdb">
+                                <label for="checkbox-hdb">HDB Town</label>
+                            </div>
+                            <div data-overlay="overlay-mrt" class="checkbox checkbox-mrt">
+                                <input type="checkbox" id="checkbox-mrt">
+                                <label for="checkbox-mrt">MRT Station</label>
+                            </div>
+                            <div data-overlay="overlay-expressway" class="checkbox checkbox-expressway">
+                                <input type="checkbox" id="checkbox-expressway">
+                                <label for="checkbox-expressway">Expressway</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="box-two" data-box="two" class="forecast-widget__content tab__item">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div id="rain-area-240-slider">
+    <div class="d-flex">
+        <button class="rain-button stop-button" v-if="autoplay" v-on:click.prevent="handleClick" aria-label="stop animation"></button>
+        <button class="rain-button play-button" v-if="!autoplay" v-on:click.prevent="handleClick" aria-label="play animation"></button>
+        <div class="range-container w-100">
+            <div v-if="items.length > 0" class="d-flex justify-content-between mx-3">
+                <p class="slider-label">{{ items[0].DateTime }}</p>
+                <p class="slider-label">{{ items[items.length - 1].DateTime }}</p>
+            </div>
+            <vue-slider class="py-1"
+                        v-model="getValue"
+                        v-bind:data="getValues"
+                        v-bind:min="0"
+                        v-bind:max="items.length - 1"
+                        v-bind:adsorb="true"
+                        v-bind:marks="true"
+                        v-bind:tooltip-placement="'bottom'"
+                        v-bind:tooltip="'always'"
+                        v-bind:tooltip-formatter="toolTipFormat"
+                        v-bind:height="24"
+                        v-bind:dot-size="24"
+                        v-bind:contained="true"
+                        v-on:change="itemChange">
+            </vue-slider>
+        </div>
+    </div>
+</div>
+<script>
+    new Vue({
+        el: '#rain-area-240-slider',
+        components: {
+            VueSlider: window['vue-slider-component']
+        },
+        data: {
+            autoplay: false,
+            autoInterval: null,
+            currentItem: 0,
+            items: [],
+        },
+        created: function() {
+            var that = this;
+
+            // Wait for the timestamp to be loaded
+            window.timestampPromise
+                .then(timestamp => {
+                    window.$.ajax({
+                        url: '/api/RainArea/GetRecentData240/' + timestamp,
+                        type: 'GET',
+                        success: function (data) {
+                            if (data && data.length > 0) {
+                                that.items = data;
+                                that.currentItem = data.length - 1;
+                                window.$('#rain_around_sg_overlay').css('display', 'inline');
+                            }
+                        },
+                        error: function (param) {
+                            console.log(param);
+                        }
+                    });
+                })
+                .catch(error => {
+                    console.error('Error during asynchronous tasks:', error);
+                });
+        },
+        computed: {
+            getValues: function () {
+                return this.items.length > 0 ? this.items.map(function (x, i) { return i }) : [];
+            },
+            getValue: function () {
+                if (this.items.length > 0) {
+                    window.$("#rain_around_sg_overlay").attr("src", this.items[this.currentItem].Url);
+                    return this.currentItem ;
+                } else {
+                    return 0;
+                }
+            }
+        },
+        methods: {
+            toolTipFormat: function (value) {
+                return this.items.length > 0 ? this.items[this.currentItem].DateTime : '';
+            },
+            itemChange: function (value) {
+                var counter = 0;
+                this.items.forEach(function (x, i) {
+                    if (i == value) counter = i;
+                });
+                this.currentItem = counter;
+                this.clearInterval();
+            },
+            handleClick: function () {
+                if (!this.autoplay) {
+                    this.autoplay = true;
+                    var that = this;
+                    this.autoInterval = setInterval(function () {
+                        that.currentItem++;
+                        if (that.currentItem === that.items.length) {
+                            that.currentItem = 0;
+                        }
+                    }, 1000);
+                } else {
+                    this.clearInterval();
+                }
+            },
+            clearInterval: function () {
+                clearInterval(this.autoInterval);
+                this.autoplay = false;
+            }
+        }
+    });
+</script>
+                    </div>
+                    <div class="col-sm-12">
+                        <div class="rain-map">
+                            <img src="/assets/images/map/240km-v2.jpg" alt="Rain areas 240 km around Singapore" class="rain-around-sg-map">
+                            <img src="/assets/images/temp/rain-legend.jpg" alt="Rain areas 240km around Singapore" id="rain_around_sg_overlay" style="display:none" name="slide" class="overlay">
+                        </div>
+                        <img src="/assets/images/temp/rain-legend.jpg" alt="rain legend">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    window.addEventListener('hashchange', function () {
+        if ($(location).attr('hash').endsWith('240km')) {
+            document.getElementById("240kmtab").click();
+        } else {
+            document.getElementById("70kmtab").click();
+        }
+    });
+    window.onload = function () {
+        if ($(location).attr('hash').endsWith('240km')) {
+            document.getElementById("240kmtab").click();
+        } else {
+            document.getElementById("70kmtab").click();
+        }
+    };
+</script>
+<div class="clearfix"></div>
+
+            
+        </div>
+    </div>
+</div>
+        
+        </div>
+    </div>
+</div>
+
+            
+        </div>
+    </div>
+</div><div class="sf_cols content-block" data-sf-element="Row">
+    <div class="sf_colsOut sf_1col_1_100">
+        <div id="MainContent_TBDD787F9005_Col00" class="sf_colsIn sf_1col_1_100" data-sf-element="Column 1" data-placeholder-label="explore more">
+            
+        </div>
+    </div>
+</div> </main> <footer class="footer"> <button type="button" class="backtotop js-backtotop"><i class="icon icon-arrow-up"></i><span class="vh">Back to</span><span>Top</span></button> <div class="related-sites"> <div class="container"> <div class="related-sites_item"> <div class="related-sites_title"> <h2 class="title">Our Related Sites</h2> </div> </div> </div> </div> 
+
+<div >
+    <div ><div class="footer__icons"><div class="container-fluid"><ul class="site-icon-wrapper row"><li><a href="http://www.weather.gov.sg/home/" title="" target="_blank" rel="noreferrer noopener" data-sf-ec-immutable=""><img src="/images/default-source/homepage/footer-logo-mss.jpg" title="Meterological Service Singapore website" data-displaymode="Original" alt="Meterological Service Singapore website" /></a></li><li><a href="https://www.haze.gov.sg/" title="" target="_blank" rel="noreferrer noopener" data-sf-ec-immutable=""><img src="/images/default-source/homepage/footer-logo-nea-haze.jpg" title="Haze Website" data-displaymode="Original" alt="Haze Website" /></a></li><li><a href="https://www.cgs.gov.sg/" title="" target="_blank" rel="noreferrer noopener" data-sf-ec-immutable=""><img src="/images/default-source/homepage/footer-logo-cgs.jpg" title="Clean & Green Singapore website" data-displaymode="Original" alt="Clean & Green Singapore website" /></a></li><li><a href="https://www.publichygienecouncil.sg/" title="" target="_blank" rel="noreferrer noopener" data-sf-ec-immutable=""><img src="/images/default-source/homepage/footer-logo-phc.jpg" title="Public Hygiene Council website" data-displaymode="Original" alt="Public Hygiene Council website" /></a></li><li><a href="https://www.cleanenvirosummit.gov.sg/" class="site-icon-item" target="_blank" rel="noreferrer noopener" title="Clean Enviro Summit website" data-sf-ec-immutable=""><img src="/images/default-source/default-album/fy21/default-album/footer-logo-cess.png" title="footer-logo-cess" data-displaymode="Original" alt="Clean Enviro Summit website" /></a></li><li><a href="https://www.climate-friendly-households.gov.sg/" title="" target="_blank" data-sf-ec-immutable=""><img src="/images/default-source/homepage/climate-vouchers.png" title="Climate Vouchers website" data-displaymode="Original" alt="Climate Vouchers" /></a></li><li><a href="https://www.greenplan.gov.sg/" title="" target="_blank" data-sf-ec-immutable=""><img src="/images/default-source/homepage/sg-green-plan_small_2.png" title="SG Green Plan website" data-displaymode="Original" alt="SG Green Plan website" /></a><br /></li></ul></div></div></div>    
+</div> 
+<footer class="sgds-footer top-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-5">
+                <p class="title"><b>National Environment Agency</b></p>
+            </div>
+            <div class="col-md-7 is-right-desktop-only">
+                <div class="footer_info app-block">
+                    <span class="has-text-weight-bold">Get the app</span>
+                    <ul class="social-media app-list">
+                        <li>
+                            <a href="https://play.google.com/store/apps/details?id=sg.gov.nea&amp;hl=en" target="_blank" rel="noreferrer noopener" class="app-list-item">
+                                <i class="icon smallicon-android"></i>
+                                <span>Download <br />for Android</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://itunes.apple.com/sg/app/myenv/id444435182?mt=8" target="_blank" rel="noreferrer noopener" class="app-list-item">
+                                <i class="icon smallicon-iphone"></i>
+                                <span>Download <br />for iPhone</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <p>Best viewed using the current and previous release of Chrome and Safari<br /></p>
+            </div>
+            <div class="col-md-7 is-right-desktop-only">
+                <ul>
+                    <li class="">
+                        <p><a href="/corporate-functions/Contact-Us" target="_self">Contact Us</a></p>
+                    </li>
+                    <li class="">
+                        <p><a href="/corporate-functions/feedback" target="_self">Feedback</a></p>
+                    </li>
+
+                    <li class="footer_info"><a href="/follow-nea">Follow us</a>
+
+    <ul class="social-media">
+        <li><a href="https://www.facebook.com/NEASingapore" target="_blank" rel="noreferrer noopener" class="social-media__item"><span class="visuallyhidden">Facebook</span><span class="fab fa-facebook-f"></span></a></li>
+        <li><a href="https://www.instagram.com/nea_sg/" target="_blank" rel="noreferrer noopener" class="social-media__item"><span class="visuallyhidden">Instagram</span><span class="fab fa-instagram"></span></a></li>
+        <li><a href="https://www.linkedin.com/company/national-environment-agency" target="_blank" rel="noreferrer noopener" class="social-media__item"><span class="visuallyhidden">LinkedIn</span><span class="fab fa-linkedin-in"></span></a></li>
+        <li><a href="https://go.gov.sg/whatsapp-nea" target="_blank" rel="noreferrer noopener" class="social-media__item"><span class="visuallyhidden">WhatsApp</span><span class="fab fa-whatsapp"></span></a></li>
+        <li><a href="https://t.me/NEASingapore" target="_blank" rel="noreferrer noopener" class="social-media__item"><span class="visuallyhidden">Telegram</span><span class="fab fa-telegram-plane"></span></a></li>
+        <li><a href="https://twitter.com/NEAsg" target="_blank" rel="noreferrer noopener" class="social-media__item"><span class="visuallyhidden">Tiktok</span><span class="fa-brands fa-x-twitter"></span></a></li>
+        <li><a href="https://www.threads.net/@nea_sg" target="_blank" rel="noreferrer noopener" class="social-media__item"><span class="visuallyhidden">Threads</span><span class="fa-brands fa-threads"></span></a></li>
+        <li><a href="https://www.youtube.com/channel/UC-tjEFkd0tT2VpD5vbjyAKA/videos" target="_blank" rel="noreferrer noopener" class="social-media__item"><span class="visuallyhidden">Youtube</span><span class="fab fa-youtube"></span></a></li>
+        <li><a href="https://www.tiktok.com/@nea_sg" target="_blank" rel="noreferrer noopener" class="social-media__item"><span class="visuallyhidden">Tiktok</span><span class="fab fa-tiktok"></span></a></li>
+        <li><a href="/rss/rss-feeds" target="_blank" rel="noreferrer noopener" class="social-media__item"><span class="visuallyhidden">RSS</span><em class="icon smallicon-rss"></em></a></li>
+    </ul>
+</li>
+
+                </ul>
+            </div>
+        </div>
+        <div class="row divider">
+            <div class="col-md-12">
+                <ul class="footer-links">
+                    <li><a href="https://tech.gov.sg/report_vulnerability" target="_blank" rel="noreferrer noopener">Report Vulnerability</a></li>
+                    <li><a href="/privacy-statement" target="_self">Privacy Statement</a></li>
+                    <li><a href="/terms-of-use" target="_self">Terms of Use</a></li>
+                    <li><a href="/open-data-licence" target="_self">Open Data Licence</a></li>
+                    <li><a href="/sitemap" target="_self">Sitemap</a></li>
+                    <li><a href="https://www.reach.gov.sg/" target="_blank" rel="noreferrer noopener" title="Link to reach.gov.sg">REACH  <i class="fa fa-external-link" style="margin-left: 5px;"></i></a></li>
+                </ul>
+            </div>
+            <div class="col-md-12 is-right-desktop-only">
+                <p class="copyright">
+                    <span>&copy; 2025 Government of Singapore</span><br />
+                    <span class="last-update">Last updated 16 April 2025</span>
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+<script type="text/javascript">
+//Overwrite ShareThis Sticky copy to clipboard button
+(function waitForStickyShareButton() {
+  // Function to modify the sticky share button once it's available
+  function modifyStickyShareButton() {
+    const stickyButton = document.querySelector('.st-sticky-share-buttons [data-network="copy"]');
+
+    // If the button is found, modify it
+    if (stickyButton) {
+      // Change data-network from "copy" to "custom-sticky-copy"
+      stickyButton.setAttribute('data-network', 'custom-sticky-copy');
+
+      // Add event listener for the click event
+      stickyButton.addEventListener('click', function () {
+        // Prevent further clicks while the message is showing
+        if (stickyButton.classList.contains('copy-disabled')) return;
+
+        // Copy the URL to clipboard
+        const urlToCopy = window.location.href;
+        navigator.clipboard.writeText(urlToCopy).then(() => {
+          // Get the label inside the button and change it to "URL Copied!"
+          const label = stickyButton.querySelector('.st-label');
+          const originalText = label ? label.innerText : "Share";
+
+          // Change the label to "URL Copied!" with smaller font size
+          if (label) {
+            label.innerText = 'URL Copied!';
+            label.style.fontSize = '10px'; // Adjust font size here
+          }
+
+          // Disable further clicks by adding a class
+          stickyButton.classList.add('copy-disabled');
+
+          // Revert the label back to the original text and font size after the timeout
+          setTimeout(() => {
+            if (label) {
+              label.innerText = originalText;
+              label.style.fontSize = ''; // Reset font size to default
+            }
+            stickyButton.classList.remove('copy-disabled'); // Re-enable the button
+          }, 1500);
+        }).catch(err => {
+          console.error('Failed to copy text:', err);
+        });
+      });
+    } else {
+      // If not found, check again after 100ms
+      setTimeout(modifyStickyShareButton, 100);
+    }
+  }
+
+  modifyStickyShareButton(); // Start checking for the button
+})();
+
+</script>
+ </footer> <script>
+            var jqe = jQuery.noConflict();
+            jqe('a[href^="/doc"]').each(function () {
+                if (jqe(this).attr('title') === "Untitled" || jqe(this).attr('title') === '' || jqe(this).not('title')) {
+                    jqe(this).attr('title', $(this).text());
+                }
+
+                if (jqe(this).attr('alt') === "Untitled" || jqe(this).attr('alt') === '' || jqe(this).not('alt')) {
+                    jqe(this).attr('alt', $(this).text());
+                }
+            })
+        </script> </form> <div id="webchat"
+         app-id="nea-captain-green"
+         app-name="Ask Captain Green"
+         app-color="#74B74A"
+         app-enable-recommendations="false"
+         app-icon="/images/default-source/vica-nea/captaingreen-avatar_final.png?Status=Temp"
+         app-subtitle=""
+         app-orchestrator-timeout="17000"
+         app-welcome-message="How can I help?"
+         app-base-font-size="16"
+         app-position-right="15"
+         app-position-bottom="100"
+         app-enable-auto-complete="true"
+         app-enable-recommendations="true"
+         app-auto-launch="false"
+         app-bot-response-trigger-event="true"
+         app-quick-launch-event="welcome"
+         app-foreground-color1="#FFFFFF"
+         app-foreground-color-2="#2E2E2E"
+         app-background-color2="#FFFFFF"
+         app-canvas-background-color="#DCDCDC"
+         app-button-border-color="#91D149"
+         app-quick-reply-button-background-color="#ECECEC"
+         app-auto-complete-background-color="#D6EEBB"
+         app-auto-complete-foreground-color="#2E2E2E"
+         app-auto-complete-hover-color="#91D149"
+         app-auto-complete-divider-color="#2E2E2E"
+         app-launcher-animation-iteration="0"
+         app-orchestrator-timeout="8000"
+         app-font-family="Roboto, sans-serif"> </div> <script src="/assets/scripts/sgds.js" type="text/javascript"></script> <!-- Google Tag Manager (noscript) --> <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NP59Q69" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript> <!-- End Google Tag Manager (noscript) --> <script src="/assets/scripts/socialmedia.js" type="text/javascript"></script> <!--Facebook Pixel Code --> <script>
+            setTimeout(function () {
+                !function (f, b, e, v, n, t, s) {
+                    if (f.fbq) return;
+                    n = f.fbq = function () {
+                        n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+                    };
+                    if (!f._fbq) f._fbq = n;
+                    n.push = n;
+                    n.loaded = !0;
+                    n.version = '2.0';
+                    n.queue = [];
+                    t = b.createElement(e);
+                    t.async = !0;
+                    t.src = v;
+                    s = b.getElementsByTagName(e)[0];
+                    s.parentNode.insertBefore(t, s)
+                }(window, document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
+                fbq('init', '390401731988315');
+                fbq('track', 'PageView');
+            }, 3000);
+        </script> <noscript> <img height="1" width="1" src="https://www.facebook.com/tr?id=390401731988315&ev=PageView&noscript=1" /> </noscript> <!--End Facebook Pixel Code --> <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                document.body.addEventListener('click', function (event) {
+                    // Check if the clicked element has the class 'st-btn'
+                    var button = event.target.closest('.st-btn');
+                    if (button) {
+                        var network = button.getAttribute('data-network');
+
+                        // Check for a parent with data-url
+                        var parent = button.closest('[data-url]');
+                        var pageUrl = parent ? parent.getAttribute('data-url') : window.location.href;
+
+                        // Log the pageUrl value to the console
+                        console.log("Page URL:", pageUrl);
+
+                        // Send the event to Google Analytics
+                        gtag('event', 'share_button_click', {
+                            'event_category': 'ShareThis Buttons',
+                            'event_label': network,
+                            'page_url': pageUrl
+                        });
+                    }
+                });
+            });
+        </script> </body> </html>

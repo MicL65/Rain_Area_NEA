@@ -1,44 +1,93 @@
-- name: Create screenshot.js
-  run: |
-    mkdir -p scripts
-    cat > scripts/screenshot.js << 'EOF'
-    const puppeteer = require('puppeteer');
+name: Screenshot Rain Areas Page
 
-    (async () => {
-      try {
-        console.log("Launching browser...");
-        const browser = await puppeteer.launch({
-          args: ['--no-sandbox', '--disable-setuid-sandbox', '--disable-gpu']
-        });
+permissions:
+  contents: write
 
-        const page = await browser.newPage();
-        await page.setViewport({ width: 1920, height: 1080 });
+on:
+  schedule:
+    # Runs at the top of every hour.
+    - cron: '0 * * * *'
+  workflow_dispatch:  # Allows manual triggering
 
-        console.log("Navigating to the page...");
-        await page.goto('https://www.nea.gov.sg/weather/rain-areas', {
-          waitUntil: 'networkidle2',
-          timeout: 60000
-        });
+jobs:
+  screenshot_job:
+    runs-on: ubuntu-latest
 
-        // Wait a bit more for layout/sticky header to stabilize
-        await page.waitForTimeout(3000);
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
 
-        // Scroll to the top if needed
-        await page.evaluate(() => window.scrollTo(0, 0));
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16'
 
-        // Create a timestamped filename
-        const now = new Date();
-        const isoString = now.toISOString().split('.')[0].replace(/:/g, "-") + "Z";
-        const filePath = `screenshot_archive/rain-areas-${isoString}.png`;
+      - name: Install Puppeteer
+        run: |
+          npm init -y
+          npm install puppeteer
 
-        // Take a full-page screenshot
-        await page.screenshot({ path: filePath, fullPage: true });
-        console.log(`Screenshot saved as ${filePath}`);
+      - name: Create screenshot script
+        run: |
+          mkdir -p scripts
+          cat > scripts/screenshot.js << 'EOF'
+          const puppeteer = require('puppeteer');
+          
+          (async () => {
+            try {
+              console.log("Launching browser...");
+              const browser = await puppeteer.launch({
+                args: [
+                  '--no-sandbox',
+                  '--disable-setuid-sandbox',
+                  '--disable-gpu',
+                  '--disable-dev-shm-usage'
+                ]
+              });
+              const page = await browser.newPage();
+              console.log("Setting viewport...");
+              await page.setViewport({ width: 1920, height: 1080 });
+              
+              console.log("Navigating to the page...");
+              await page.goto('https://www.nea.gov.sg/weather/rain-areas', {
+                waitUntil: 'networkidle2',
+                timeout: 60000
+              });
+              
+              console.log("Waiting for 3 seconds...");
+              await page.waitForTimeout(3000);
+              
+              console.log("Scrolling to the top...");
+              await page.evaluate(() => window.scrollTo(0, 0));
+              
+              // Create a timestamp for the filename in UTC
+              const now = new Date();
+              const isoString = now.toISOString().split('.')[0].replace(/:/g, "-") + "Z";
+              const filePath = `screenshot_archive/rain-areas-${isoString}.png`;
+              console.log("Taking full-page screenshot...");
+              
+              // Take a full-page screenshot
+              await page.screenshot({ path: filePath, fullPage: true });
+              console.log(`Screenshot saved as ${filePath}`);
+              
+              await browser.close();
+            } catch (err) {
+              console.error("Error encountered:", err);
+              process.exit(1);
+            }
+          })();
+          EOF
 
-        await browser.close();
-      } catch (err) {
-        console.error("Error encountered:", err);
-        process.exit(1);
-      }
-    })();
-    EOF
+      - name: Create screenshot_archive directory
+        run: mkdir -p screenshot_archive
+
+      - name: Run screenshot script
+        run: node scripts/screenshot.js
+
+      - name: Commit and push screenshot
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add screenshot_archive/
+          git commit -m "Add screenshot: $(date -u +'%Y-%m-%dT%H-%M-%SZ')" || echo "No changes to commit"
+          git push

@@ -1,74 +1,44 @@
-name: Screenshot Rain Areas Page
+- name: Create screenshot.js
+  run: |
+    mkdir -p scripts
+    cat > scripts/screenshot.js << 'EOF'
+    const puppeteer = require('puppeteer');
 
-permissions:
-  contents: write
+    (async () => {
+      try {
+        console.log("Launching browser...");
+        const browser = await puppeteer.launch({
+          args: ['--no-sandbox', '--disable-setuid-sandbox', '--disable-gpu']
+        });
 
-on:
-  schedule:
-    # Runs at the top of every hour.
-    - cron: '0 * * * *'
-  workflow_dispatch:  # Allows manual triggering
+        const page = await browser.newPage();
+        await page.setViewport({ width: 1920, height: 1080 });
 
-jobs:
-  screenshot_job:
-    runs-on: ubuntu-latest
+        console.log("Navigating to the page...");
+        await page.goto('https://www.nea.gov.sg/weather/rain-areas', {
+          waitUntil: 'networkidle2',
+          timeout: 60000
+        });
 
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v3
+        // Wait a bit more for layout/sticky header to stabilize
+        await page.waitForTimeout(3000);
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: '16'
+        // Scroll to the top if needed
+        await page.evaluate(() => window.scrollTo(0, 0));
 
-      - name: Install Puppeteer
-        run: |
-          # Initialize a simple Node project and install Puppeteer
-          npm init -y
-          npm install puppeteer
+        // Create a timestamped filename
+        const now = new Date();
+        const isoString = now.toISOString().split('.')[0].replace(/:/g, "-") + "Z";
+        const filePath = `screenshot_archive/rain-areas-${isoString}.png`;
 
-      - name: Create screenshot script
-        run: |
-          mkdir -p scripts
-          cat > scripts/screenshot.js << 'EOF'
-          const puppeteer = require('puppeteer');
-          
-          (async () => {
-            // Launch browser with flags required in many CI environments
-            const browser = await puppeteer.launch({
-              args: ['--no-sandbox', '--disable-setuid-sandbox']
-            });
-            const page = await browser.newPage();
-            // Navigate to the page and wait until the network is idle.
-            await page.goto('https://www.nea.gov.sg/weather/rain-areas', { waitUntil: 'networkidle2' });
-            
-            // Create a timestamp for the filename
-            const now = new Date();
-            // Format the ISO string by removing milliseconds and replacing colons with dashes for a valid filename
-            const isoString = now.toISOString().split('.')[0].replace(/:/g, "-") + "Z";
-            const filePath = `screenshot_archive/rain-areas-${isoString}.png`;
-            
-            // Take a full-page screenshot
-            await page.screenshot({ path: filePath, fullPage: true });
-            console.log(`Screenshot saved as ${filePath}`);
-            await browser.close();
-          })().catch(err => {
-            console.error(err);
-            process.exit(1);
-          });
-          EOF
+        // Take a full-page screenshot
+        await page.screenshot({ path: filePath, fullPage: true });
+        console.log(`Screenshot saved as ${filePath}`);
 
-      - name: Create screenshot_archive directory
-        run: mkdir -p screenshot_archive
-
-      - name: Run screenshot script
-        run: node scripts/screenshot.js
-
-      - name: Commit and push screenshot
-        run: |
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add screenshot_archive/
-          git commit -m "Add screenshot: $(date -u +'%Y-%m-%dT%H-%M-%SZ')" || echo "No changes to commit"
-          git push
+        await browser.close();
+      } catch (err) {
+        console.error("Error encountered:", err);
+        process.exit(1);
+      }
+    })();
+    EOF

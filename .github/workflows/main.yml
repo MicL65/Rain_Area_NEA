@@ -1,4 +1,4 @@
-name: Screenshot Rain Areas Page
+name: PDF Rain Areas Page
 
 permissions:
   contents: write
@@ -10,7 +10,7 @@ on:
   workflow_dispatch:  # Allows manual triggering
 
 jobs:
-  screenshot_job:
+  pdf_job:
     runs-on: ubuntu-latest
 
     steps:
@@ -24,34 +24,33 @@ jobs:
 
       - name: Install Puppeteer
         run: |
-          # Initialize a simple Node project and install Puppeteer
           npm init -y
           npm install puppeteer
 
-      - name: Create screenshot script
+      - name: Create PDF script
         run: |
           mkdir -p scripts
-          cat > scripts/screenshot.js << 'EOF'
+          cat > scripts/pdf.js << 'EOF'
           const puppeteer = require('puppeteer');
           
           (async () => {
-            // Launch browser with flags required in many CI environments
+            // Launch browser with necessary flags for CI environments
             const browser = await puppeteer.launch({
               args: ['--no-sandbox', '--disable-setuid-sandbox']
             });
             const page = await browser.newPage();
-            // Navigate to the page and wait until the network is idle.
+            
+            // Navigate to the NEA Rain Areas page
             await page.goto('https://www.nea.gov.sg/weather/rain-areas', { waitUntil: 'networkidle2' });
             
-            // Create a timestamp for the filename
+            // Create a timestamp for the filename in UTC
             const now = new Date();
-            // Format the ISO string by removing milliseconds and replacing colons with dashes for a valid filename
             const isoString = now.toISOString().split('.')[0].replace(/:/g, "-") + "Z";
-            const filePath = `screenshot_archive/rain-areas-${isoString}.png`;
+            const filePath = `pdf_archive/rain-areas-${isoString}.pdf`;
             
-            // Take a full-page screenshot
-            await page.screenshot({ path: filePath, fullPage: true });
-            console.log(`Screenshot saved as ${filePath}`);
+            // Generate a PDF of the page in A4 format
+            await page.pdf({ path: filePath, format: 'A4' });
+            console.log(`PDF saved as ${filePath}`);
             await browser.close();
           })().catch(err => {
             console.error(err);
@@ -59,16 +58,16 @@ jobs:
           });
           EOF
 
-      - name: Create screenshot_archive directory
-        run: mkdir -p screenshot_archive
+      - name: Create pdf_archive directory
+        run: mkdir -p pdf_archive
 
-      - name: Run screenshot script
-        run: node scripts/screenshot.js
+      - name: Run PDF script
+        run: node scripts/pdf.js
 
-      - name: Commit and push screenshot
+      - name: Commit and push PDF
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add screenshot_archive/
-          git commit -m "Add screenshot: $(date -u +'%Y-%m-%dT%H-%M-%SZ')" || echo "No changes to commit"
+          git add pdf_archive/
+          git commit -m "Add rain areas PDF: $(date -u +'%Y-%m-%dT%H-%M-%SZ')" || echo "No changes to commit"
           git push

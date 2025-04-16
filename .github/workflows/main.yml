@@ -1,0 +1,47 @@
+name: Download Rain Areas Page
+
+permissions:
+  contents: write
+
+on:
+  schedule:
+    # Runs at the top of every hour.
+    - cron: '0 * * * *'
+  workflow_dispatch:  # Allows manual triggering
+
+jobs:
+  download_page:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Download Rain Areas Page with timestamp
+        run: |
+          # Get current UTC time formatted as YYYY-MM-DDTHH-MM-SSZ
+          TIMESTAMP=$(date -u +'%Y-%m-%dT%H-%M-%SZ')
+          echo "Timestamp: $TIMESTAMP"
+
+          # Ensure the archive folder exists
+          mkdir -p page_archive
+
+          # Download the webpage and save it with a timestamp in the file name
+          FILE_PATH="page_archive/rain_areas-${TIMESTAMP}.html"
+          curl -sSf "https://www.nea.gov.sg/weather/rain-areas" -o "$FILE_PATH"
+          echo "Downloaded page saved as $FILE_PATH"
+
+      - name: Commit and push new page file
+        run: |
+          # Set git user information for the commit
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+
+          # Add the new file
+          git add page_archive/
+
+          # Commit the changes; if nothing changed, output a friendly message
+          git commit -m "Add rain areas page: $(date -u +'%Y-%m-%dT%H-%M-%SZ')" || echo "No changes to commit"
+
+          # Push the commit using the GITHUB_TOKEN
+          git push
